@@ -118,8 +118,9 @@ def calculate_total(request):
 	print("Total=",total)
 	return render(request,'serverapp/side.html',{'P':P,'GST':GST,'total':total})
 
-    urls.py
-    from django.contrib import admin
+urls.py
+
+from django.contrib import admin
 from django.urls import path
 from serverapp import views
 
