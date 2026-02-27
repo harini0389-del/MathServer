@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Maths server</title>
+</head>
+<style>
+    .head{
+            gap:30;
+            position: absolute;
+            top:22%;
+            right: 40%;
+            border: dashed  4px purple;
+            border-radius: 20px;
+            background: pink;
+        }
+         input {
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 20px;
+        }
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: violet;
+        }
+        form {
+            border-radius: 20px;
+            width: 300px;
+        }
+        .submit{
+            color: blue;
+            background-color: lightcoral;
+        }
+</style>
+<body>
+    <center>
+    <div class="head">
+                <h1><u>Server Side Processing</u></h1>
+                <h2>Harini M</h2>
+                <h2>25001011</h2>
+    <form method="post">
+        {%csrf_token%}
+        <div>
+        PRICE : <input type="text"  name="Price"  value="{{p}}" required></input> in rs
+        <br>
+        </div>
+        <div>
+        GST : <input type="text"  name="GST" value="{{GST}}" required></input>in %
+        <br>
+        </div>
+        <div>
+        <input class="submit" type="submit" value="calculate">
+        </div>
+        <div>
+        Total : <input type="text" name="Total" value="{{total}}"></input>rs
+        <br>
+        </div>  
+    </form>
+    
+    </center>
+</body>
+</html>
+
